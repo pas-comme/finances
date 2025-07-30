@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Finances</string>
+    <string name="consultation_traitement">Consultation transaction</string>
+    <string name="consultation_solde">Consultation solde</string>
+    <string name="retrait_d_argent">Retrait d\'argent</string>
+    <string name="d_position">Déposition</string>
+    <string name="mot_de_passe">mot de passe</string>
+    <string name="confirmer_mot_de_passe">confirmer mot de passe</string>
+    <string name="scanner_votre_identifiant_pour_acceder_au_compte">Scanner votre identifiant pour acceder au compte</string>
+    <string name="valider">VALIDER</string>
+    <string name="saisissez_votre_mot_de_passe_pour_le_controle_de_s_curit">Saisissez votre mot de passe pour le controle de sécurité</string>
+    <string name="retourner_l_acceuil">retourner à l\'acceuil</string>
+    <string name="montant_de_solde">montant de solde :</string>
+    <string name="suivant">SUIVANT</string>
+    <string name="scanner_l_identifiant_du_cash_point">scanner l\'identifiant du cash point</string>
+    <string name="mot_de_passe_du_cash_point">mot de passe du cash point</string>
+</resources>

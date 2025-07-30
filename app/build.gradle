@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.finances"
+        minSdk 21
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'com.example.finances'
+}
+
+dependencies {
+    /*
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation ('eu.livotov.labs.android:CAMView:2.0.1@aar') {transitive(true)}
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
+    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+     */
+
+
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation 'com.github.androidmads:QRGenerator:1.0.5'
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+    //implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    //implementation ('eu.livotov.labs.android:CAMView:2.0.1@aar') {transitive(true)}
+    implementation 'com.google.zxing:core:3.5.3'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.android.gms:play-services-auth:21.4.0'
+    //implementation 'com.budiyev.android:code-scanner:2.1.0'
+    //noinspection Aligned16KB
+    implementation 'com.google.mlkit:barcode-scanning:17.3.0'
+    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

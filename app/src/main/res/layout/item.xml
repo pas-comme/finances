@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/vfDLG"
+    android:gravity="center_horizontal|center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/titreDLG"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="@string/montant_de_solde"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                android:id="@+id/montant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="@string/mot_de_passe"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                android:id="@+id/mdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="@string/mot_de_passe_du_cash_point"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                android:id="@+id/mdpCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:autofillHints=""
+                android:ems="10"
+                android:visibility="gone"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/suivant"
+            android:padding="5dp"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:text="@string/suivant"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/valider"
+            android:padding="5dp"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="@string/valider"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:background="#555555"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/scanner_l_identifiant_du_cash_point"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            />
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:layout_width="match_parent"
+            android:id="@+id/camVIEW"
+            android:layout_height="match_parent"
+            app:autoFocusButtonColor="@color/white"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@color/white"
+            app:flashButtonVisible="true"
+            app:maskColor="#555555"
+            />
+    </LinearLayout>
+
+</ViewFlipper>
