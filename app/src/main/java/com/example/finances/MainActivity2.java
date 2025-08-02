@@ -77,7 +77,7 @@ public class MainActivity2 extends AppCompatActivity {
         solde = i.getDoubleExtra("solde", 0);
         mdp = i.getIntExtra("mdp", 0);
 
-        String urlp = "http://10.0.49.123:5000/API/citizens/onePRS?id=" + id;
+        String urlp = "http://10.11.123.17:5000/API/citizens/onePRS?id=" + id;
         JsonObjectRequest requestP = new JsonObjectRequest(Request.Method.GET, urlp, null,
                 response -> {
 
@@ -114,7 +114,7 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
         trasaction.setOnClickListener(view -> {
-            String url = "http://10.0.49.169:5000/API/finances/deals?id=" + id;
+            String url = "http://10.11.123.59:5000/API/finances/deals?id=" + id;
             JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                     response -> {
                         try {
@@ -160,7 +160,7 @@ public class MainActivity2 extends AppCompatActivity {
             scanner.setFlashEnabled(false);
             scanner.setDecodeCallback(result -> runOnUiThread(() -> {
                 scanner.stopPreview();
-                String url = "http://10.0.49.123:5000/API/citizens/exists?id=" + id;
+                String url = "http://10.11.123.17:5000/API/citizens/exists?id=" + id;
                 @SuppressLint("SetTextI18n") JsonObjectRequest requesti = new JsonObjectRequest(Request.Method.GET, url, null,
                         reponse -> {
                             vf.showPrevious();
@@ -169,7 +169,7 @@ public class MainActivity2 extends AppCompatActivity {
                             pwdCP.setVisibility(View.VISIBLE);
                             suivant.setVisibility(View.GONE);
 
-                            String urlm = "http://10.0.49.169:5000/API/finances/login?id=" + result.getText();
+                            String urlm = "http://10.11.123.59:5000/API/finances/login?id=" + result.getText();
                             @SuppressLint("SetTextI18n") JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, urlm, null,
                                     response -> {
                                         try {
@@ -208,7 +208,7 @@ public class MainActivity2 extends AppCompatActivity {
                 @SuppressLint("SimpleDateFormat") DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
                 String temp = format.format(new Date());
 
-                String urli = "http://10.0.49.169:5000/API/finances/changeBalance?solde=" + solde + "&id=" + id
+                String urli = "http://10.11.123.59:5000/API/finances/changeBalance?solde=" + solde + "&id=" + id
                         + "&type=" + action + "&montant=" + montant.getText() + "&idCP=" + idCP + "&daty=" + temp;
                 StringRequest requestI = new StringRequest(Request.Method.GET, urli,
                         response1 -> {
@@ -241,9 +241,9 @@ public class MainActivity2 extends AppCompatActivity {
 
             try {
 
-                daty.setText(getItem(position).optString("daty"));
+                daty.setText(Objects.requireNonNull(getItem(position)).optString("daty"));
                 description.setText(
-                        getItem(position).getString("type") + " de " + Objects.requireNonNull(getItem(position)).getString("montant"));
+                        Objects.requireNonNull(getItem(position)).getString("type") + " de " + Objects.requireNonNull(getItem(position)).getString("montant"));
 
             } catch (JSONException e) {
                 Log.d("erreur", e.toString());

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(1000);
                 id = result.getText();
-                String url = "http://10.0.49.123:5000/API/citizens/exists?id=" + id;
+                String url = "http://10.11.123.17:5000/API/citizens/exists?id=" + id;
                 @SuppressLint("SetTextI18n") JsonObjectRequest requesti = new JsonObjectRequest(Request.Method.GET, url, null,
                         reponse -> {
                             String ter = "";
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             else{
                                 viewFlipper.showNext();
-                                String urlm = "http://10.0.49.169:5000/API/finances/login?id=" + id;
+                                String urlm = "http://10.11.123.59:5000/API/finances/login?id=" + id;
                                 @SuppressLint("SetTextI18n") JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, urlm, null,
                                         response -> {
                                             boolean bool = false;
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                                                         Toast.makeText(this, "ERREUR : mot de passe vide", Toast.LENGTH_LONG).show();
                                                     else {
                                                         if (mdp.getText().toString().equals(confirmation.getText().toString())){
-                                                            String urli = "http://10.0.49.169:5000/API/finances/enrolment?id=" + id + "&mdp=" + mdp.getText().toString().hashCode();
+                                                            String urli = "http://10.11.123.59:5000/API/finances/enrolment?id=" + id + "&mdp=" + mdp.getText().toString().hashCode();
                                                             StringRequest requestI = new StringRequest(Request.Method.GET, urli,
                                                                     response1 -> {
                                                                         Toast.makeText(this, response1, Toast.LENGTH_LONG).show();

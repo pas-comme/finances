@@ -14,4 +14,5 @@
     <string name="suivant">SUIVANT</string>
     <string name="scanner_l_identifiant_du_cash_point">scanner l\'identifiant du cash point</string>
     <string name="mot_de_passe_du_cash_point">mot de passe du cash point</string>
+    <string name="liste_des_transactions">LISTE DES TRANSACTIONS</string>
 </resources>
