@@ -205,7 +205,7 @@ public class MainActivity2 extends AppCompatActivity {
                     solde -= Double.parseDouble(montant.getText().toString());
                 else if (action.equals("dépôt"))
                     solde += Double.parseDouble(montant.getText().toString());
-                @SuppressLint("SimpleDateFormat") DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+                @SuppressLint("SimpleDateFormat") DateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
                 String temp = format.format(new Date());
 
                 String urli = "http://10.11.123.59:5000/API/finances/changeBalance?solde=" + solde + "&id=" + id
